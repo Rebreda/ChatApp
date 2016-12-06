@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>  </title>
+
+    <!-- build:css styles/components/main.min.css -->
+    <link rel="stylesheet" href="styles/h5bp.css">
+    <link rel="stylesheet" href="styles/components/components.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body>
+    <header class="app-bar promote-layer">
+      <div class="app-bar-container">
+        <button class="menu"><img src="images/hamburger.svg" alt="Menu"></button>
+        <h1 class="logo"> Supreme Chat </h1>
+        <section class="app-bar-actions">
+        <!-- Put App Bar Buttons Here -->
+        </section>
+      </div>
+    </header>
+
+    <nav class="navdrawer-container promote-layer">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="#waterloo">Waterloo Group Chat</a></li>
+        <li><a href="#laurier">Laurier Group Chat</a></li>
+        <li><a href="#mychat">My Group Chat</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h2 id="title"> Group Chat Application </h2>
+      <div class="holder">
+      <p> Add your username, and join a group! </p>
+      </div>
+      <input id="username" type="text" placeholder="example123"/>
+      <div class="noGroup">
+        
+        <h2> Please Select a group! </h2>
+        
+      </div>
+      
+      <!--<section id="waterloo" class="">-->
+      <!--  <div class="chatbox"></div>-->
+     
+   
+      <!--  <input name="usermsg" type="text" class="usermsg" size="63" />-->
+      <!--  <div  class="send button--secondary" > SEND </div> -->
+    
+      <!--</section>-->
+      
+      <!--<section id="laurier" class="">-->
+      <!--  <div class="chatbox"></div>-->
+     
+   
+        <input id="sendM" name="usermsg" type="text" class="usermsg" size="63" />
+        <div  class="send button--secondary" > SEND </div> 
+    
+      <!--</section>-->
+      
+      <!--<section id="mychat"  class="">-->
+      <!--  <div class="chatbox "></div>-->
+     
+   
+      <!--  <input name="usermsg" type="text" class="usermsg" size="63" />-->
+      <!--  <div  class="send button--secondary" > SEND </div>-->
+        
+      <!--</section>-->
+      
+      
+    </main>
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+
+    <script>
+        // Initialize Database for Messages
+        var config = {
+          apiKey: "AIzaSyAcgH8DD72_mALvJ4chwxlNWsSumAqnh-M",
+          authDomain: "messagingapp-fcf43.firebaseapp.com",
+          databaseURL: "https://messagingapp-fcf43.firebaseio.com",
+          storageBucket: "messagingapp-fcf43.appspot.com",
+          messagingSenderId: "290793047741"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="scripts/main.js"></script>
+
+  </body>
+</html>

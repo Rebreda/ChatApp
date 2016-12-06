@@ -121,8 +121,16 @@
   }
   window.onload = function(){
     $(".noGroup").hide();
+    
     if (getHash().length > 0){
       //if a table url, create table connection
+      if(localStorage.getItem("un")){
+	      var x = localStorage.getItem("un");
+
+	      console.log(x);
+	      
+	      $("#username").val(x);
+      }
       
       build(getHash);
       var newDatabase = new Database();
@@ -145,6 +153,13 @@
 
   window.onhashchange = function() { 
        $(".noGroup").hide();
+        if(localStorage.getItem("un")){
+	      var x = localStorage.getItem("un");
+
+	      console.log(x);
+	      
+	      $("#username").val(x);
+      }
     if (getHash().length > 0){
       //if a table url, create table connection
       $(".chatbox").remove();
@@ -166,6 +181,8 @@
     } 
   };
     
-    
+    $("#username").on("keyup", function(){
+	    localStorage.setItem("un", getUsername());
+    })
     
 })();

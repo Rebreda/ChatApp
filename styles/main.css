@@ -22,7 +22,7 @@ section{
 
 .user {
   background: red !important;
-  float: right;
+/*   float: right; */
 }
 
 .chatmessage > p {
